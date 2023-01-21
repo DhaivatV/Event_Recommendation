@@ -1,4 +1,4 @@
-<h1>Event Form</h1>
+<h1>Event Database Creation</h1>
 
 <p>A simple Flask application that allows users to submit an event with event name, event description, fields of study, and fields of interest. The data is stored in a SQLite database.</p>
 
