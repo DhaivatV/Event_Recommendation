@@ -20,7 +20,7 @@
 <h2>Installation</h2>
 <ol>
     <li>Clone the repository:
-    <pre>git clone https://github.com/your_username/Event-Form.git</pre></li>
+    <pre>git clone https://github.com/DhaivatV/Event_Recommendation.git</pre></li>
     <li>Install the required packages:
     <pre>pip install -r requirements.txt</pre></li>
     <li>Run the application:
