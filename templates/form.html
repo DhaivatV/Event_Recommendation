@@ -1,0 +1,60 @@
+<style>
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 20px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<form method="POST" action="/submit">
+    <label for="event_name">Event Name:</label>
+    <input type="text" id="event_name" name="event_name" required>
+    <br>
+    <label for="event_description">Event Description:</label>
+    <input type="text" id="event_description" name="event_description" required>
+    <br>
+    <label for="fields_of_study">Fields of Study:</label>
+    <select id="fields_of_study" name="fields_of_study" multiple size="10">
+
+        {% for field in fields_of_study %}
+        <option value="{{ field }}">{{ field }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="fields_of_interest">Fields of Interest:</label>
+
+    <select id="fields_of_interest" name="fields_of_interest" multiple size="10">
+
+        {% for field in fields_of_interest %}
+        <option value="{{ field }}">{{ field }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Create Event">
+</form>
